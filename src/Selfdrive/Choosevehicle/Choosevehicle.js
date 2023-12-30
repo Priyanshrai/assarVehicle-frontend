@@ -20,10 +20,11 @@ function Choosevehicle() {
     const handleTabClick = (event) => {
       const tabId = event.currentTarget.id;
       console.log("Tab clicked: " + tabId);
+      const segment = "hatchback"
       if (tabId === "Hatchback-Car-tab") {
         // Fetch data conditionally based on the clicked tab ID
         axios
-          .get(__apiURLListing + "fetch?category=Hatchback")
+          .get(__apiURLListing + `fetch/hatchback`)
           .then((response) => {
             Setvehicle(response.data);
             console.log(response.data);
@@ -35,7 +36,7 @@ function Choosevehicle() {
       if (tabId === "Premium-Hatch-tab") {
         // Fetch data conditionally based on the clicked tab ID
         axios
-          .get(__apiURLListing + "fetch?category=Premium Hatchback")
+          .get(__apiURLListing + "fetch/premium_hatchback")
           .then((response) => {
             Setvehicle(response.data);
             console.log(response.data);
@@ -47,7 +48,7 @@ function Choosevehicle() {
       if (tabId === "Sedan-car-tab") {
         // Fetch data conditionally based on the clicked tab ID
         axios
-          .get(__apiURLListing + "fetch?category=Sedan")
+          .get(__apiURLListing + "fetch/sedan")
           .then((response) => {
             Setvehicle(response.data);
             console.log(response.data);
@@ -59,7 +60,7 @@ function Choosevehicle() {
       if (tabId === "Compact-SUV-tab") {
         // Fetch data conditionally based on the clicked tab ID
         axios
-          .get(__apiURLListing + "fetch?category=Compact-SUV")
+          .get(__apiURLListing + "fetch/compact_suv")
           .then((response) => {
             Setvehicle(response.data);
             console.log(response.data);
@@ -71,7 +72,19 @@ function Choosevehicle() {
       if (tabId === "SUV-tab") {
         // Fetch data conditionally based on the clicked tab ID
         axios
-          .get(__apiURLListing + "fetch?category=SUV")
+          .get(__apiURLListing + "fetch/suv")
+          .then((response) => {
+            Setvehicle(response.data);
+            console.log(response.data);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+      if (tabId === "pills-muv") {
+        // Fetch data conditionally based on the clicked tab ID
+        axios
+          .get(__apiURLListing + "fetch/muv")
           .then((response) => {
             Setvehicle(response.data);
             console.log(response.data);

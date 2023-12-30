@@ -8,12 +8,12 @@ import { useState, useEffect, React } from "react";
 function Sdvehiclemgmt() {
   const Category = [{ Category: "Car" }, { Category: "Two-Wheeler" }];
   const Segment = [
-    { Category: "Car", segment: "Hatchback" },
-    { Category: "Car", segment: "Premium Hatchback" },
-    { Category: "Car", segment: "Sedan" },
-    { Category: "Car", segment: "Compact-SUV" },
-    { Category: "Car", segment: "SUV" },
-    { Category: "Car", segment: "MUV" },
+    { Category: "Car", segment: "hatchback" },
+    { Category: "Car", segment: "premium_hatchback" },
+    { Category: "Car", segment: "sedan" },
+    { Category: "Car", segment: "compact_suv" },
+    { Category: "Car", segment: "suv" },
+    { Category: "Car", segment: "muv" },
     { Category: "Two-Wheeler", segment: "Crusier" },
     { Category: "Two-Wheeler", segment: "Commuter" },
     { Category: "Two-Wheeler", segment: "Sports" },
